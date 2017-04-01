@@ -1,0 +1,15 @@
+int sensor = 2;
+int val = 0;
+int ledPin = 7;
+
+void setup(){
+  pinMode(sensor, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+  val = digitalRead(sensor);
+  digitalWrite(ledPin, val);
+  Serial.println(val);
+}
